@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_11_start/screens/bottomnav.dart';
 import 'package:flutter_11_start/screens/login.dart';
 import 'package:flutter_11_start/screens/signup.dart';
 import 'package:flutter_11_start/screens/splashscreen.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Signup(),
+      home: Login(),
     );
   }
 }

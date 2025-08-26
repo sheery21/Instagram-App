@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_11_start/screens/bottomnav.dart';
 import 'package:flutter_11_start/screens/signup.dart';
 import 'package:flutter_11_start/widgets/uihelper.dart';
 
@@ -51,7 +52,9 @@ class _LoginState extends State<Login> {
                     ],
                   ),
                   SizedBox(height: 10),
-                  UiHelper.CustomButton(callback: () {}, buttonName: 'Log in'),
+                  UiHelper.CustomButton(callback: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Bottomnav()));
+                  }, buttonName: 'Log in'),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
