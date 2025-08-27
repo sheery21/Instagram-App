@@ -8,11 +8,8 @@ class Post extends StatefulWidget {
 }
 
 class _PostState extends State<Post> {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(),
-    );
+    return Scaffold(body: Container());
   }
 }
