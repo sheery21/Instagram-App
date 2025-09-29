@@ -110,8 +110,13 @@ class _HomeState extends State<Home> {
               subtitle: Text('Tokyo, Japan',style: TextStyle(color: Color(0XFFF9F9F9) , fontSize: 12)),
               trailing: UiHelper.CustomImage(imgUrl: 'MoreIcon.png'),
             )
+          ),
+          SizedBox(height: 15.0,),
+          UiHelper.CustomImage(imgUrl: 'Rectangle.png'),
+          SizedBox(height: 15.0,),
+          Container(
+            child: UiHelper.CustomImage(imgUrl: 'Shape.png'),
           )
-
         ],),
       ),
     );

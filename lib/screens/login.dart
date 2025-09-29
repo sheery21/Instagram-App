@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      UiHelper.CustomImage(imgUrl: 'Shape.png'),
+                      // UiHelper.CustomImage(imgUrl: 'Shape.png'),
                       UiHelper.CustomTextButton(
                         text: 'Log in with Facebook',
                         callback: () {},
