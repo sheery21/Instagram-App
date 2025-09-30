@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_11_start/widgets/uihelper.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -13,31 +14,19 @@ class _SearchState extends State<Search> {
   final arrContent = [
     {
       "img":
-          "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
+          "https://images.unsplash.com/photo-1486365227551-f3f90034a57c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW5pbWFsfGVufDB8fDB8fHww",
     },
     {
       "img":
-          'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+          'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg',
     },
     {
       "img":
-          'https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?cs=srgb&dl=pexels-hsapir-1054655.jpg&fm=jpg',
+          'https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp',
     },
     {
       "img":
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Q-GayaGn6nptJrP8wXnzcgQemuBGqLL8mQ&s',
-    },
-    {
-      "img":
-          'https://media.istockphoto.com/id/912868130/photo/camping-tents-under-pine-trees-with-sunlight-at-pang-ung-lake-mae-hong-son-in-thailand.jpg?s=612x612&w=0&k=20&c=szAjS3sihwoGwySQb2gN7p3TI373V1KIz7fMGkWHSlw=',
-    },
-    {
-      "img":
-          "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
-    },
-    {
-      "img":
-          'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+          'https://i.pinimg.com/736x/2d/95/e5/2d95e5886fc4c65a6778b5fee94a7d59.jpg',
     },
     {
       "img":
@@ -45,79 +34,98 @@ class _SearchState extends State<Search> {
     },
     {
       "img":
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Q-GayaGn6nptJrP8wXnzcgQemuBGqLL8mQ&s',
+          "https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     },
     {
       "img":
-          'https://media.istockphoto.com/id/912868130/photo/camping-tents-under-pine-trees-with-sunlight-at-pang-ung-lake-mae-hong-son-in-thailand.jpg?s=612x612&w=0&k=20&c=szAjS3sihwoGwySQb2gN7p3TI373V1KIz7fMGkWHSlw=',
+          'https://burst.shopifycdn.com/photos/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg?width=1000&format=pjpg&exif=0&iptc=0',
     },
     {
       "img":
-          "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
+          'https://t4.ftcdn.net/jpg/02/56/10/07/360_F_256100731_qNLp6MQ3FjYtA3Freu9epjhsAj2cwU9c.jpg',
     },
     {
       "img":
-          'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+          'https://preview.redd.it/some-of-my-favourite-bird-images-from-the-last-12-months-v0-jkyypk1t5zre1.jpg?width=640&crop=smart&auto=webp&s=f558d943843a77e0338f198b3171e0c47e5ebe7d',
     },
     {
       "img":
-          'https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?cs=srgb&dl=pexels-hsapir-1054655.jpg&fm=jpg',
+          'https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D',
     },
     {
       "img":
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Q-GayaGn6nptJrP8wXnzcgQemuBGqLL8mQ&s',
+          "https://burst.shopifycdn.com/photos/cave-of-wonder-and-lights.jpg?width=1000&format=pjpg&exif=0&iptc=0",
     },
     {
       "img":
-          'https://media.istockphoto.com/id/912868130/photo/camping-tents-under-pine-trees-with-sunlight-at-pang-ung-lake-mae-hong-son-in-thailand.jpg?s=612x612&w=0&k=20&c=szAjS3sihwoGwySQb2gN7p3TI373V1KIz7fMGkWHSlw=',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0TTbUfyAAANbPkNeRdfx7c_iMXWhFPhw5Rg&s',
     },
     {
       "img":
-          'https://media.istockphoto.com/id/912868130/photo/camping-tents-under-pine-trees-with-sunlight-at-pang-ung-lake-mae-hong-son-in-thailand.jpg?s=612x612&w=0&k=20&c=szAjS3sihwoGwySQb2gN7p3TI373V1KIz7fMGkWHSlw=',
+          'https://i.pinimg.com/236x/9f/8a/04/9f8a04de9dc05da8123f530d29818472.jpg',
     },
     {
       "img":
-          "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
+          'https://static.vecteezy.com/system/resources/thumbnails/042/730/459/small/lion-danger-animal-wildlife-nature-forest-photo.jpg',
     },
     {
       "img":
-          'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+          'https://cdn.imago-images.com/Images/header/hello-we-are-imago_03-2023.jpg',
     },
     {
       "img":
-          'https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?cs=srgb&dl=pexels-hsapir-1054655.jpg&fm=jpg',
+          'https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png',
     },
     {
       "img":
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Q-GayaGn6nptJrP8wXnzcgQemuBGqLL8mQ&s',
+          "https://media.istockphoto.com/id/1458215547/photo/brown-bear.jpg?s=612x612&w=0&k=20&c=MRQhtNC_-P0llLRwwA3wmbQL6iroSjUla1PmvvEWCZU=",
     },
     {
       "img":
-          'https://media.istockphoto.com/id/912868130/photo/camping-tents-under-pine-trees-with-sunlight-at-pang-ung-lake-mae-hong-son-in-thailand.jpg?s=612x612&w=0&k=20&c=szAjS3sihwoGwySQb2gN7p3TI373V1KIz7fMGkWHSlw=',
+          'https://images.unsplash.com/photo-1626808642875-0aa545482dfb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D',
     },
     {
       "img":
-          "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCf6lkVPXx_i5XxO0TX7SmXQXoeKottPpK8Q&s',
     },
     {
       "img":
-          'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',
+          'https://cdn.pixabay.com/photo/2016/04/05/11/04/india-1309206_1280.jpg',
     },
     {
       "img":
-          'https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?cs=srgb&dl=pexels-hsapir-1054655.jpg&fm=jpg',
+          'https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg',
     },
     {
       "img":
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Q-GayaGn6nptJrP8wXnzcgQemuBGqLL8mQ&s',
+          "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?cs=srgb&dl=pexels-chevanon-1108099.jpg&fm=jpg",
     },
     {
       "img":
-          'https://media.istockphoto.com/id/912868130/photo/camping-tents-under-pine-trees-with-sunlight-at-pang-ung-lake-mae-hong-son-in-thailand.jpg?s=612x612&w=0&k=20&c=szAjS3sihwoGwySQb2gN7p3TI373V1KIz7fMGkWHSlw=',
+          'https://cdn.pixabay.com/photo/2023/09/21/14/17/italy-8266783_1280.jpg',
     },
     {
       "img":
-          "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
+          'https://images.ctfassets.net/hrltx12pl8hq/4f6DfV5DbqaQUSw0uo0mWi/6fbcf889bdef65c5b92ffee86b13fc44/shutterstock_376532611.jpg?fit=fill&w=600&h=400',
+    },
+    {
+      "img":
+          'https://img.freepik.com/free-photo/wet-sphere-reflective-water-abstract-beauty-generated-by-ai_188544-19616.jpg?semt=ais_hybrid&w=740&q=80',
+    },
+    {
+      "img":
+          'https://imageio.forbes.com/specials-images/imageserve/5faad4255239c9448d6c7bcd/Best-Animal-Photos-Contest--Close-Up-Of-baby-monkey/960x0.jpg?format=jpg&width=960',
+    },
+    {
+      "img":
+          "https://plus.unsplash.com/premium_photo-1724654643848-ab19f6ec1c79?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZG9scGhpbnxlbnwwfHwwfHx8MA%3D%3D",
+    },{
+      "img":
+          'https://www.nasa.gov/wp-content/uploads/2023/06/jwst-flickr-52259221868-30e1c78f0c-4k.jpg?w=2048',
+    },
+    {
+      "img":
+          "https://cdn.pixabay.com/photo/2022/04/15/07/58/sunset-7133867_640.jpg",
     },
   ];
 
@@ -176,7 +184,7 @@ class _SearchState extends State<Search> {
             ),
             SizedBox(height: 10),
             Container(
-              width: MediaQuery.of(context).size.width / 1.1,
+              width: MediaQuery.of(context).size.width ,
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
@@ -301,25 +309,23 @@ class _SearchState extends State<Search> {
                 ),
               ),
             ),
-            // SizedBox(height: 10),
+            SizedBox(height: 10),
             Expanded(
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                ),
+              child: MasonryGridView.count(
+                padding: EdgeInsets.zero,
+                crossAxisCount: 3,
+                mainAxisSpacing: 2,
+                crossAxisSpacing: 2,
+                itemCount: arrContent.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    clipBehavior: Clip.antiAlias,
-                    height: 190,
-                    width: 190,
-                    decoration: BoxDecoration(),
+                  return ClipRRect(
+                    borderRadius: BorderRadius.circular(0),
                     child: Image.network(
                       arrContent[index]['img'].toString(),
                       fit: BoxFit.cover,
                     ),
                   );
                 },
-                itemCount: arrContent.length,
               ),
             ),
           ],

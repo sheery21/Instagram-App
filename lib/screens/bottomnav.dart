@@ -26,7 +26,7 @@ class _BottomnavState extends State<Bottomnav> {
         currentIndex: currentIndex,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF121212),
         type: BottomNavigationBarType.fixed,
         onTap: ( index){
           setState(() {
@@ -52,7 +52,7 @@ class _BottomnavState extends State<Bottomnav> {
           ), label: ''),
           BottomNavigationBarItem(icon: Padding(
             padding: const EdgeInsets.only(top: 5.0),
-            child: UiHelper.CustomImage(imgUrl: 'Oval.png' ,),
+            child: UiHelper.customImage(imgUrl: 'Oval.png' , height: 35, width: 35,),
           ), label: ''),
         ],
       ),

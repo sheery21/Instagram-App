@@ -44,6 +44,19 @@ class UiHelper {
     return Image.asset('assests/images/${imgUrl}');
   }
 
+  static Widget customImage({
+    required String imgUrl,
+    double? height,
+    double? width,
+  }) {
+    return Image.asset(
+      'assests/images/${imgUrl}',
+      height: height,
+      width: width,
+      fit: BoxFit.cover, // image stretch na ho, proportion maintain kare
+    );
+  }
+
   static CustomButton({
     required VoidCallback callback,
     required String buttonName,
